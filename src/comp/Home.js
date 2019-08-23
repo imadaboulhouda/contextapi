@@ -7,7 +7,7 @@ import {
 const Home =(props)=>{
       const
           {
-              products,
+              statex,
               addProduct
           } = useContext(ImadContext);
    const addNew = (e)=>{
@@ -15,7 +15,8 @@ const Home =(props)=>{
    addProduct("imadox",1500);
    };
     return(<React.Fragment>
-        { products.map((v,key)=>{
+        {
+            statex.map((v, key) => {
            return (<p key={key}>{v.name} <b>{v.price } MAD</b></p>);
         })}
 
